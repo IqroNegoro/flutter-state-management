@@ -48,8 +48,9 @@ class CartProvider extends ChangeNotifier {
           )
           .qty += 1;
     } else {
-      carts.add(item);
+      _carts.add(item);
     }
+    log(carts.toString());
     notifyListeners();
   }
 
@@ -63,7 +64,7 @@ class CartProvider extends ChangeNotifier {
     } else {
       carts[element].qty--;
     }
-
+    log(carts.toString());
     notifyListeners();
   }
 }
